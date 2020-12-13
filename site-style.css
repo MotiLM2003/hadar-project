@@ -17,6 +17,10 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
 .row {
   display: flex;
 }
@@ -144,6 +148,10 @@ body {
   grid-area: bottom;
 }
 
+.top-row .date {
+  float: right;
+}
+
 .footer {
   grid-area: footer;
   background-color: #333333;
@@ -178,4 +186,62 @@ body {
 
 .footer .icon-container:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  min-height: 650px;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: 'JetBrains Mono', sans-serif;
+  color: #fff;
+}
+
+.wrapper .group {
+  margin-bottom: 25px;
+}
+.wrapper .group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.wrapper .group input[type='text'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: 1s;
+}
+
+.wrapper .group input[type='text']:focus,
+textarea:focus {
+  border: 2px solid #171718;
+}
+textarea {
+  height: 100px;
+}
+
+.btn {
+  font-family: 'JetBrains Mono', sans-serif;
+  border-radius: 3px;
+  padding: 7px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+#formCompleted {
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
 }
