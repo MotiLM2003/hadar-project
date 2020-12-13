@@ -17,6 +17,13 @@ body {
   min-height: 100vh;
 }
 
+.row {
+  display: flex;
+}
+
+.row > div:last-child {
+  margin-left: 100px;
+}
 .grid-container {
   display: grid;
   width: 100%;
@@ -24,13 +31,13 @@ body {
   /* grid-template-rows: 1fr 1fr; */
   grid-template-areas:
     'main-black top-row'
+    'main-black middle-row'
     'main-black bottom-row'
     'footer footer';
 }
 .main-black {
   grid-area: main-black;
   background-color: #000;
-  position: relative;
 }
 
 .image-container {
@@ -72,12 +79,14 @@ body {
   margin-left: -3px;
 }
 .top-row,
-.bottom-row {
-  padding: 50px;
-  height: 520px;
+.bottom-row,
+.middle-row {
+  padding: 30px;
+  height: 220px;
 }
 
 .top-row p,
+.middle-row p,
 .bottom-row p {
   font-family: 'JetBrains Mono', sans-serif;
   font-size: 16px;
@@ -89,6 +98,7 @@ body {
 }
 
 .top-row h2,
+.middle-row h2,
 .bottom-row h2 {
   font-family: 'JetBrains Mono', sans-serif;
   font-size: 25px;
@@ -97,6 +107,7 @@ body {
   text-transform: uppercase;
 }
 .top-row h3,
+.middle-row h3,
 .bottom-row h3 {
   font-family: 'JetBrains Mono', sans-serif;
   font-weight: 1000;
@@ -108,6 +119,7 @@ body {
 }
 
 .top-row ul,
+.middle-row ul,
 .bottom-row ul {
   margin: 10px 0 25px 0;
   padding: 0 0 0 20px;
@@ -120,6 +132,11 @@ body {
 
 .bottom-row {
   grid-area: bottom-row;
+  background-color: #eccb97;
+}
+
+.middle-row {
+  grid-area: middle-row;
   background-color: #e8e3db;
 }
 
